@@ -1005,9 +1005,9 @@ statistics()
 
 s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
-cursor.execute(""" INSERT INTO іменник_статистичні_дані (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO noun_statistics (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1049,9 +1049,9 @@ statistics()
 
 s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
-cursor.execute(""" INSERT INTO іменник_статистичні_дані_2 (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO noun_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1100,9 +1100,9 @@ s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
 cursor.execute("select * from дієслово_середня_частота")
 statistics()
-cursor.execute(""" INSERT INTO дієслово_статистичні_дані (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO verb_statistics (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1139,9 +1139,9 @@ s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
 cursor.execute("select * from дієслово_середня_частота_2")
 statistics()
-cursor.execute(""" INSERT INTO дієслово_статистичні_дані_2 (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO verb_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1193,9 +1193,9 @@ s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
 cursor.execute("select * from прикметник_середня_частота")
 statistics()
-cursor.execute(""" INSERT INTO прикметник_статистичні_дані (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO adjective_statistics (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1233,9 +1233,9 @@ s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
 cursor.execute("select * from прикметник_середня_частота_2")
 statistics()
-cursor.execute(""" INSERT INTO прикметник_статистичні_дані_2 (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO adjective_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1289,9 +1289,9 @@ s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
 cursor.execute("select * from сполучник_середня_частота")
 statistics()
-cursor.execute(""" INSERT INTO сполучник_статистичні_дані (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO conjunction_statistics (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1330,9 +1330,9 @@ s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
 cursor.execute("select * from сполучник_середня_частота_2")
 statistics()
-cursor.execute(""" INSERT INTO сполучник_статистичні_дані_2 (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO conjunction_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1385,9 +1385,9 @@ s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
 cursor.execute("select * from займенниковий_іменник_середня_частота")
 statistics()
-cursor.execute(""" INSERT INTO займенниковий_іменник_статистичні_дані (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO pronoun_statistics (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 M1 = freq
@@ -1424,9 +1424,9 @@ s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
 cursor.execute("select * from займенниковий_іменник_середня_частота_2")
 statistics()
-cursor.execute(""" INSERT INTO займенниковий_іменник_статистичні_дані_2 (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO pronoun_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1481,9 +1481,9 @@ s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
 cursor.execute("select * from прийменник_середня_частота")
 statistics()
-cursor.execute(""" INSERT INTO прийменник_статистичні_дані (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO preposition_statistics (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1525,9 +1525,9 @@ s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
 cursor.execute("select * from прийменник_середня_частота_2")
 statistics()
-cursor.execute(""" INSERT INTO прийменник_статистичні_дані_2 (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO preposition_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1580,9 +1580,9 @@ s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
 cursor.execute("select * from частка_середня_частота")
 statistics()
-cursor.execute(""" INSERT INTO частка_статистичні_дані (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO particle_statistics (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1622,9 +1622,9 @@ s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
 cursor.execute("select * from частка_середня_частота_2")
 statistics()
-cursor.execute(""" INSERT INTO частка_статистичні_дані_2 (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO particle_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1678,9 +1678,9 @@ s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
 cursor.execute("select * from прислівник_середня_частота")
 statistics()
-cursor.execute(""" INSERT INTO прислівник_статистичні_дані (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO adverb_statistics (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1719,9 +1719,9 @@ s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
 cursor.execute("select * from прислівник_середня_частота_2")
 statistics()
-cursor.execute(""" INSERT INTO прислівник_статистичні_дані_2 (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO adverb_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1775,9 +1775,9 @@ s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
 cursor.execute("select * from вигук_середня_частота")
 statistics()
-cursor.execute(""" INSERT INTO вигук_статистичні_дані (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO exclemation_statistics (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1815,9 +1815,9 @@ s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
 cursor.execute("select * from вигук_середня_частота_2")
 statistics()
-cursor.execute(""" INSERT INTO вигук_статистичні_дані_2 (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO exclemation_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1873,9 +1873,9 @@ s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
 cursor.execute("select * from компаратив_середня_частота")
 statistics()
-cursor.execute(""" INSERT INTO компаратив_статистичні_дані (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO comparative_statistics (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1913,9 +1913,9 @@ s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
 cursor.execute("select * from дієприслівник_середня_частота")
 statistics()
-cursor.execute(""" INSERT INTO дієприслівник_статистичні_дані (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO adverbial_participle_statistics (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1944,9 +1944,9 @@ s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
 cursor.execute("select * from дієприслівник_середня_частота_2")
 statistics()
-cursor.execute(""" INSERT INTO дієприслівник_статистичні_дані_2 (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO adverbial_participle_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -1988,9 +1988,9 @@ s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
 cursor.execute("select * from предикатив_середня_частота")
 statistics()
-cursor.execute(""" INSERT INTO предикатив_статистичні_дані (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO predicative_statistics (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -2019,9 +2019,9 @@ s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
 cursor.execute("select * from предикатив_середня_частота_2")
 statistics()
-cursor.execute(""" INSERT INTO предикатив_статистичні_дані_2 (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO predicative_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -2062,9 +2062,9 @@ s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
 cursor.execute("select * from числівник_середня_частота")
 statistics()
-cursor.execute(""" INSERT INTO числівник_статистичні_дані (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-               інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO numeral_statistics (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
@@ -2092,9 +2092,9 @@ s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
 cursor.execute("select * from числівник_середня_частота_2")
 statistics()
-cursor.execute(""" INSERT INTO числівник_статистичні_дані_2 (серед_квадратич_відхил, міра_колив_серед_част,
-               x_сер_плюс_мінус_сигма, x_сер_плюс_мінус_2_сигма, x_сер_плюс_мінус_3_сигма, інтервал_міри_колив_сигма,
-              інтервал_міри_колив_2_сигма, інтервал_міри_колив_3_сигма, V, Vmax, D, error)
+cursor.execute(""" INSERT INTO numeral_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
+               x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
+               2sigma_fluctuation_interval, 3sigma_fluctuation_interval, V, Vmax, D, error)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", my_list)
 conn.commit()
 
