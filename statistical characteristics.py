@@ -1098,7 +1098,7 @@ conn.commit()
 
 s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
-cursor.execute("select * from дієслово_середня_частота")
+cursor.execute("select * from verb_aver_freq")
 statistics()
 cursor.execute(""" INSERT INTO verb_statistics (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1137,7 +1137,7 @@ conn.commit()
 
 s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
-cursor.execute("select * from дієслово_середня_частота_2")
+cursor.execute("select * from verb_aver_freq_2")
 statistics()
 cursor.execute(""" INSERT INTO verb_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1191,7 +1191,7 @@ conn.commit()
 
 s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
-cursor.execute("select * from прикметник_середня_частота")
+cursor.execute("select * from adjective_aver_freq")
 statistics()
 cursor.execute(""" INSERT INTO adjective_statistics (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1231,7 +1231,7 @@ conn.commit()
 
 s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
-cursor.execute("select * from прикметник_середня_частота_2")
+cursor.execute("select * from adjective_aver_freq_2")
 statistics()
 cursor.execute(""" INSERT INTO adjective_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1287,7 +1287,7 @@ conn.commit()
 
 s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
-cursor.execute("select * from сполучник_середня_частота")
+cursor.execute("select * from conjunction_aver_freq")
 statistics()
 cursor.execute(""" INSERT INTO conjunction_statistics (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1328,7 +1328,7 @@ conn.commit()
 
 s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
-cursor.execute("select * from сполучник_середня_частота_2")
+cursor.execute("select * from conjunction_aver_freq_2")
 statistics()
 cursor.execute(""" INSERT INTO conjunction_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1383,7 +1383,7 @@ conn.commit()
 
 s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
-cursor.execute("select * from займенниковий_іменник_середня_частота")
+cursor.execute("select * from pronoun_aver_freq")
 statistics()
 cursor.execute(""" INSERT INTO pronoun_statistics (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1422,7 +1422,7 @@ conn.commit()
 
 s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
-cursor.execute("select * from займенниковий_іменник_середня_частота_2")
+cursor.execute("select * from pronoun_aver_freq_2")
 statistics()
 cursor.execute(""" INSERT INTO pronoun_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1479,7 +1479,7 @@ conn.commit()
 
 s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
-cursor.execute("select * from прийменник_середня_частота")
+cursor.execute("select * from preposition_aver_freq")
 statistics()
 cursor.execute(""" INSERT INTO preposition_statistics (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1523,7 +1523,7 @@ conn.commit()
 
 s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
-cursor.execute("select * from прийменник_середня_частота_2")
+cursor.execute("select * from preposition_aver_freq_2")
 statistics()
 cursor.execute(""" INSERT INTO preposition_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1578,7 +1578,7 @@ conn.commit()
 
 s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
-cursor.execute("select * from частка_середня_частота")
+cursor.execute("select * from particle_aver_freq")
 statistics()
 cursor.execute(""" INSERT INTO particle_statistics (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1620,7 +1620,7 @@ conn.commit()
 
 s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
-cursor.execute("select * from частка_середня_частота_2")
+cursor.execute("select * from particle_aver_freq_2")
 statistics()
 cursor.execute(""" INSERT INTO particle_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1676,7 +1676,7 @@ conn.commit()
 
 s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
-cursor.execute("select * from прислівник_середня_частота")
+cursor.execute("select * from adverb_aver_freq")
 statistics()
 cursor.execute(""" INSERT INTO adverb_statistics (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1717,7 +1717,7 @@ conn.commit()
 
 s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
-cursor.execute("select * from прислівник_середня_частота_2")
+cursor.execute("select * from adverb_aver_freq_2")
 statistics()
 cursor.execute(""" INSERT INTO adverb_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1773,7 +1773,7 @@ conn.commit()
 
 s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
-cursor.execute("select * from вигук_середня_частота")
+cursor.execute("select * from exclemation_aver_freq")
 statistics()
 cursor.execute(""" INSERT INTO exclemation_statistics (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1813,7 +1813,7 @@ conn.commit()
 
 s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
-cursor.execute("select * from вигук_середня_частота_2")
+cursor.execute("select * from exclemation_aver_freq_2")
 statistics()
 cursor.execute(""" INSERT INTO exclemation_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1871,7 +1871,7 @@ conn.commit()
 
 s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
-cursor.execute("select * from компаратив_середня_частота")
+cursor.execute("select * from comparative_aver_freq")
 statistics()
 cursor.execute(""" INSERT INTO comparative_statistics (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1911,7 +1911,7 @@ conn.commit()
 
 s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
-cursor.execute("select * from дієприслівник_середня_частота")
+cursor.execute("select * from adverbial_participle_aver_freq")
 statistics()
 cursor.execute(""" INSERT INTO adverbial_participle_statistics (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1942,7 +1942,7 @@ conn.commit()
 
 s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
-cursor.execute("select * from дієприслівник_середня_частота_2")
+cursor.execute("select * from adverbial_participle_aver_freq_2")
 statistics()
 cursor.execute(""" INSERT INTO adverbial_participle_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -1986,7 +1986,7 @@ conn.commit()
 
 s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
-cursor.execute("select * from предикатив_середня_частота")
+cursor.execute("select * from predicative_aver_freq")
 statistics()
 cursor.execute(""" INSERT INTO predicative_statistics (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -2017,7 +2017,7 @@ conn.commit()
 
 s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
-cursor.execute("select * from предикатив_середня_частота_2")
+cursor.execute("select * from predicative_aver_freq_2")
 statistics()
 cursor.execute(""" INSERT INTO predicative_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -2060,7 +2060,7 @@ conn.commit()
 
 s_1_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 x = x_aver
-cursor.execute("select * from числівник_середня_частота")
+cursor.execute("select * from numeral_aver_freq")
 statistics()
 cursor.execute(""" INSERT INTO numeral_statistics (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
@@ -2090,7 +2090,7 @@ conn.commit()
 
 s_2_x = sum(xi_minus_x_aver_squared_ni)/(ni_sum*(ni_sum-1))
 y = x_aver
-cursor.execute("select * from числівник_середня_частота_2")
+cursor.execute("select * from numeral_aver_freq_2")
 statistics()
 cursor.execute(""" INSERT INTO numeral_statistics_2 (mean_square_deviation, aver_freq_fluctuation,
                x_aver_plus_minus_sigma, x_aver_plus_minus_2_sigma, x_aver_plus_minus_3_sigma, sigma_fluctuation_interval,
