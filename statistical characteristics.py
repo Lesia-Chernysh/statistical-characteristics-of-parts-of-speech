@@ -1081,7 +1081,7 @@ student(x, y, s_1_x, s_2_x)
 X_squared_count(M1, M2, K)
 part_of_sp = part_of_sp
 
-cursor.execute("""INSERT INTO Стьюдент_хі_квадрат (part_of_sp, student, xi_squared)
+cursor.execute("""INSERT INTO Student_criteria_xi_squared (part_of_sp, student, xi_squared)
                   VALUES (?, ?, ?)""", (str(part_of_sp), t, X_squared))
 conn.commit()
 
@@ -1172,7 +1172,7 @@ plt.show()
 student(x, y, s_1_x, s_2_x)
 X_squared_count(M1, M2, K)
 part_of_sp = part_of_sp
-cursor.execute("""INSERT INTO Стьюдент_хі_квадрат (part_of_sp, student, xi_squared)
+cursor.execute("""INSERT INTO Student_criteria_xi_squared (part_of_sp, student, xi_squared)
                   VALUES (?, ?, ?)""", (str(part_of_sp), t, X_squared))
 conn.commit()
 
@@ -1265,7 +1265,7 @@ plt.show()
 student(x, y, s_1_x, s_2_x)
 X_squared_count(M1, M2, K)
 part_of_sp = part_of_sp
-cursor.execute("""INSERT INTO Стьюдент_хі_квадрат (part_of_sp, student, xi_squared)
+cursor.execute("""INSERT INTO Student_criteria_xi_squared (part_of_sp, student, xi_squared)
                   VALUES (?, ?, ?)""", (str(part_of_sp), t, X_squared))
 conn.commit()
 
@@ -1362,7 +1362,7 @@ plt.show()
 student(x, y, s_1_x, s_2_x)
 X_squared_count(M1, M2, K)
 part_of_sp = part_of_sp
-cursor.execute("""INSERT INTO Стьюдент_хі_квадрат (part_of_sp, student, xi_squared)
+cursor.execute("""INSERT INTO Student_criteria_xi_squared (part_of_sp, student, xi_squared)
                   VALUES (?, ?, ?)""", (str(part_of_sp), t, X_squared))
 conn.commit()
 
@@ -1457,7 +1457,7 @@ plt.show()
 student(x, y, s_1_x, s_2_x)
 X_squared_count(M1, M2, K)
 part_of_sp = part_of_sp
-cursor.execute("""INSERT INTO Стьюдент_хі_квадрат (part_of_sp, student, xi_squared)
+cursor.execute("""INSERT INTO Student_criteria_xi_squared (part_of_sp, student, xi_squared)
                   VALUES (?, ?, ?)""", (str(part_of_sp), t, X_squared))
 conn.commit()
 
@@ -1559,7 +1559,7 @@ plt.show()
 student(x, y, s_1_x, s_2_x)
 X_squared_count(M1, M2, K)
 part_of_sp = part_of_sp
-cursor.execute("""INSERT INTO Стьюдент_хі_квадрат (part_of_sp, student, xi_squared)
+cursor.execute("""INSERT INTO Student_criteria_xi_squared (part_of_sp, student, xi_squared)
                   VALUES (?, ?, ?)""", (str(part_of_sp), t, X_squared))
 conn.commit()
 
@@ -1655,7 +1655,7 @@ plt.show()
 student(x, y, s_1_x, s_2_x)
 X_squared_count(M1, M2, K)
 part_of_sp = part_of_sp
-cursor.execute("""INSERT INTO Стьюдент_хі_квадрат (part_of_sp, student, xi_squared)
+cursor.execute("""INSERT INTO Student_criteria_xi_squared (part_of_sp, student, xi_squared)
                   VALUES (?, ?, ?)""", (str(part_of_sp), t, X_squared))
 conn.commit()
 
@@ -1753,7 +1753,7 @@ plt.show()
 student(x, y, s_1_x, s_2_x)
 X_squared_count(M1, M2, K)
 part_of_sp = part_of_sp
-cursor.execute("""INSERT INTO Стьюдент_хі_квадрат (part_of_sp, student, xi_squared)
+cursor.execute("""INSERT INTO Student_criteria_xi_squared (part_of_sp, student, xi_squared)
                   VALUES (?, ?, ?)""", (str(part_of_sp), t, X_squared))
 conn.commit()
 
@@ -1849,7 +1849,7 @@ plt.show()
 student(x, y, s_1_x, s_2_x)
 X_squared_count(M1, M2, K)
 part_of_sp = part_of_sp
-cursor.execute("""INSERT INTO Стьюдент_хі_квадрат (part_of_sp, student, xi_squared)
+cursor.execute("""INSERT INTO Student_criteria_xi_squared (part_of_sp, student, xi_squared)
                   VALUES (?, ?, ?)""", (str(part_of_sp), t, X_squared))
 conn.commit()
 
@@ -1965,7 +1965,7 @@ plt.show()
 student(x, y, s_1_x, s_2_x)
 X_squared_count(M1, M2, K)
 part_of_sp = part_of_sp
-cursor.execute("""INSERT INTO Стьюдент_хі_квадрат (part_of_sp, student, xi_squared)
+cursor.execute("""INSERT INTO Student_criteria_xi_squared (part_of_sp, student, xi_squared)
                   VALUES (?, ?, ?)""", (str(part_of_sp), t, X_squared))
 conn.commit()
 
@@ -2040,7 +2040,7 @@ plt.show()
 student(x, y, s_1_x, s_2_x)
 X_squared_count(M1, M2, K)
 part_of_sp = part_of_sp
-cursor.execute("""INSERT INTO Стьюдент_хі_квадрат (part_of_sp, student, xi_squared)
+cursor.execute("""INSERT INTO Student_criteria_xi_squared (part_of_sp, student, xi_squared)
                   VALUES (?, ?, ?)""", (str(part_of_sp), t, X_squared))
 conn.commit()
 
@@ -2113,7 +2113,7 @@ plt.show()
 student(x, y, s_1_x, s_2_x)
 X_squared_count(M1, M2, K)
 part_of_sp = part_of_sp
-cursor.execute("""INSERT INTO Стьюдент_хі_квадрат (part_of_sp, student, xi_squared)
+cursor.execute("""INSERT INTO Student_criteria_xi_squared (part_of_sp, student, xi_squared)
                   VALUES (?, ?, ?)""", (str(part_of_sp), t, X_squared))
 conn.commit()
 
