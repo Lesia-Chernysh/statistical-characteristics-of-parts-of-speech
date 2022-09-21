@@ -1087,8 +1087,8 @@ conn.commit()
 
 
 
-cursor.execute("""select * from част_частин_мови
-                   where частина_мови = 'VERB'""")
+cursor.execute("""select * from part_of_speech_freq
+                   where part_of_speech = 'VERB'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO дієслово_середня_частота (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1125,8 +1125,8 @@ plt.plot(xi_interval, ni_interval, label = '1 вибірка, за інтерв�
 
 
 
-cursor.execute("""select * from част_частин_мови_2
-                   where частина_мови = 'VERB'""")
+cursor.execute("""select * from part_of_speech_freq_2
+                   where part_of_speech = 'VERB'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO дієслово_середня_частота_2 (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1178,8 +1178,8 @@ conn.commit()
 
 
 
-cursor.execute("""select * from част_частин_мови
-                   where частина_мови = 'ADJF'""")
+cursor.execute("""select * from part_of_speech_freq
+                   where part_of_speech = 'ADJF'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO прикметник_середня_частота (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1217,8 +1217,8 @@ print(xi_interval)
 
 
 
-cursor.execute("""select * from част_частин_мови_2
-                   where частина_мови = 'ADJF'""")
+cursor.execute("""select * from part_of_speech_freq_2
+                   where part_of_speech = 'ADJF'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO прикметник_середня_частота_2 (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1271,9 +1271,8 @@ conn.commit()
 
 
 
-
-cursor.execute("""select * from част_частин_мови
-                   where частина_мови = 'CONJ'""")
+cursor.execute("""select * from part_of_speech_freq
+                   where part_of_speech = 'CONJ'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO сполучник_середня_частота (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1313,8 +1312,8 @@ plt.plot(xi_interval, ni_interval, label = '1 вибірка, за інтерв�
 
 
 
-cursor.execute("""select * from част_частин_мови_2
-                   where частина_мови = 'CONJ'""")
+cursor.execute("""select * from part_of_speech_freq_2
+                   where part_of_speech = 'CONJ'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO сполучник_середня_частота_2 (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1366,8 +1365,8 @@ conn.commit()
 
 
 
-cursor.execute("""select * from част_частин_мови
-                   where частина_мови = 'NPRO'""")
+cursor.execute("""select * from part_of_speech_freq
+                   where part_of_speech = 'NPRO'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO займенниковий_іменник_середня_частота (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1405,8 +1404,8 @@ plt.plot(xi_interval, ni_interval, label = '1 вибірка, за інтерв�
 
 
 
-cursor.execute("""select * from част_частин_мови_2
-                   where частина_мови = 'NPRO'""")
+cursor.execute("""select * from part_of_speech_freq_2
+                   where part_of_speech = 'NPRO'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO займенниковий_іменник_середня_частота_2 (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1461,8 +1460,8 @@ conn.commit()
 
 
 
-cursor.execute("""select * from част_частин_мови
-                   where частина_мови = 'PREP'""")
+cursor.execute("""select * from part_of_speech_freq
+                   where part_of_speech = 'PREP'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO прийменник_середня_частота (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1504,8 +1503,8 @@ plt.plot(xi_interval, ni_interval, label = '1 вибірка, за інтерв�
 
 
 
-cursor.execute("""select * from част_частин_мови_2
-                   where частина_мови = 'PREP'""")
+cursor.execute("""select * from part_of_speech_freq_2
+                   where part_of_speech = 'PREP'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO прийменник_середня_частота_2 (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1558,8 +1557,8 @@ conn.commit()
 
 
 
-cursor.execute("""select * from част_частин_мови
-                   where частина_мови = 'PRCL'""")
+cursor.execute("""select * from part_of_speech_freq
+                   where part_of_speech = 'PRCL'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO частка_середня_частота (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1599,8 +1598,8 @@ plt.plot(xi_interval, ni_interval, label = '1 вибірка, за інтерв�
 
 
 
-cursor.execute("""select * from част_частин_мови_2
-                   where частина_мови = 'PRCL'""")
+cursor.execute("""select * from part_of_speech_freq_2
+                   where part_of_speech = 'PRCL'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO частка_середня_частота_2 (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1654,8 +1653,8 @@ conn.commit()
 
 
 
-cursor.execute("""select * from част_частин_мови
-                   where частина_мови = 'ADVB'""")
+cursor.execute("""select * from part_of_speech_freq
+                   where part_of_speech = 'ADVB'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO прислівник_середня_частота (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1693,8 +1692,8 @@ plt.plot(xi_interval, ni_interval, label = '1 вибірка, за інтерв�
 
 
 
-cursor.execute("""select * from част_частин_мови_2
-                   where частина_мови = 'ADVB'""")
+cursor.execute("""select * from part_of_speech_freq_2
+                   where part_of_speech = 'ADVB'""")
 count_aver_freq()
 #print(aver_freq_x_ordered)
 for i in aver_freq_x_ordered:
@@ -1749,8 +1748,8 @@ conn.commit()
 
 
 
-cursor.execute("""select * from част_частин_мови
-                   where частина_мови = 'INTJ'""")
+cursor.execute("""select * from part_of_speech_freq
+                   where part_of_speech = 'INTJ'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO вигук_середня_частота (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1788,8 +1787,8 @@ plt.plot(xi_interval, ni_interval, label = '1 вибірка, за інтерв�
 
 
 
-cursor.execute("""select * from част_частин_мови_2
-                   where частина_мови = 'INTJ'""")
+cursor.execute("""select * from part_of_speech_freq_2
+                   where part_of_speech = 'INTJ'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO вигук_середня_частота_2 (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1845,8 +1844,8 @@ conn.commit()
 
 
 
-cursor.execute("""select * from част_частин_мови
-                   where частина_мови = 'COMP'""")
+cursor.execute("""select * from part_of_speech_freq
+                   where part_of_speech = 'COMP'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO компаратив_середня_частота (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1884,8 +1883,8 @@ plt.plot(xi, ni, label = '1 вибірка', marker = 'o', markerfacecolor = 'bl
 
 
 
-cursor.execute("""select * from част_частин_мови
-                   where частина_мови = 'GRND'""")
+cursor.execute("""select * from part_of_speech_freq
+                   where part_of_speech = 'GRND'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO дієприслівник_середня_частота (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1914,8 +1913,8 @@ plt.plot(xi, ni, label = '1 вибірка', marker = 'o', markerfacecolor = 'bl
 
 
 
-cursor.execute("""select * from част_частин_мови_2
-                   where частина_мови = 'GRND'""")
+cursor.execute("""select * from part_of_speech_freq_2
+                   where part_of_speech = 'GRND'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO дієприслівник_середня_частота_2 (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1957,8 +1956,8 @@ conn.commit()
 
 
 
-cursor.execute("""select * from част_частин_мови
-                   where частина_мови = 'PRED'""")
+cursor.execute("""select * from part_of_speech_freq
+                   where part_of_speech = 'PRED'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO предикатив_середня_частота (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -1987,8 +1986,8 @@ plt.plot(xi, ni, label = '1 вибірка', marker = 'o', markerfacecolor = 'bl
 
 
 
-cursor.execute("""select * from част_частин_мови_2
-                   where частина_мови = 'PRED'""")
+cursor.execute("""select * from part_of_speech_freq_2
+                   where part_of_speech = 'PRED'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO предикатив_середня_частота_2 (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -2029,9 +2028,8 @@ conn.commit()
 
 
 
-
-cursor.execute("""select * from част_частин_мови
-                   where частина_мови = 'NUMR'""")
+cursor.execute("""select * from part_of_speech_freq
+                   where part_of_speech = 'NUMR'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO числівник_середня_частота (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
@@ -2059,8 +2057,8 @@ plt.plot(xi, ni, label = '1 вибірка', marker = 'o', markerfacecolor = 'bl
 
 
 
-cursor.execute("""select * from част_частин_мови_2
-                   where частина_мови = 'NUMR'""")
+cursor.execute("""select * from part_of_speech_freq_2
+                   where part_of_speech = 'NUMR'""")
 count_aver_freq()
 for i in aver_freq_x_ordered:
     cursor.execute("""INSERT INTO числівник_середня_частота_2 (xi, ni, xini, x_сер, різниця_xi_та_x_сер, квадрат_різниці_xi_та_x_сер, квадрат_різниці_xi_та_x_серni)
