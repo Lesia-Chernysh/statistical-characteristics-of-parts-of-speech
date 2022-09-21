@@ -10,28 +10,28 @@ conn = sqlite3.connect('frequency_dict.db')
 cursor = conn.cursor()
 
 def create_tables():
-    cursor.execute('''CREATE TABLE IF NOT EXISTS іменник_середня_частота
+    cursor.execute('''CREATE TABLE IF NOT EXISTS noun_aver_freq
                     (id INTEGER PRIMARY KEY NOT NULL,
                     xi INTEGER,
                     ni INTEGER,
                     xini INTEGER,
-                    x_сер INTEGER,
-                    різниця_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_серni INTEGER)
+                    x_aver INTEGER,
+                    xi_minus_x_aver INTEGER,
+                    xi_minus_x_aver_squared INTEGER,
+                    xi_minus_x_aver_mult_ni_squared INTEGER)
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS іменник_статистичні_дані
+    cursor.execute('''CREATE TABLE IF NOT EXISTS noun_statistics
                     (id INTEGER PRIMARY KEY NOT NULL,
-                    серед_квадратич_відхил REAL,
-                    міра_колив_серед_част REAL,
-                    x_сер_плюс_мінус_сигма TEXT,
-                    x_сер_плюс_мінус_2_сигма TEXT,
-                    x_сер_плюс_мінус_3_сигма TEXT,
-                    інтервал_міри_колив_сигма TEXT,
-                    інтервал_міри_колив_2_сигма TEXT,
-                    інтервал_міри_колив_3_сигма TEXT,
+                    mean_square_deviation REAL,
+                    aver_freq_fluctuation REAL,
+                    x_aver_plus_minus_sigma TEXT,
+                    x_aver_plus_minus_2_sigma TEXT,
+                    x_aver_plus_minus_3_sigma TEXT,
+                    sigma_fluctuation_interval TEXT,
+                    2sigma_fluctuation_interval TEXT,
+                    3sigma_fluctuation_interval TEXT,
                     V REAL,
                     Vmax REAL,
                     D REAL,
@@ -39,28 +39,28 @@ def create_tables():
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS дієслово_середня_частота
+    cursor.execute('''CREATE TABLE IF NOT EXISTS verb_aver_freq
                     (id INTEGER PRIMARY KEY NOT NULL,
                     xi INTEGER,
                     ni INTEGER,
                     xini INTEGER,
-                    x_сер INTEGER,
-                    різниця_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_серni INTEGER)
+                    x_aver INTEGER,
+                    xi_minus_x_aver INTEGER,
+                    xi_minus_x_aver_squared INTEGER,
+                    xi_minus_x_aver_mult_ni_squared INTEGER)
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS дієслово_статистичні_дані
+    cursor.execute('''CREATE TABLE IF NOT EXISTS verb_statistics
                     (id INTEGER PRIMARY KEY NOT NULL,
-                    серед_квадратич_відхил REAL,
-                    міра_колив_серед_част REAL,
-                    x_сер_плюс_мінус_сигма TEXT,
-                    x_сер_плюс_мінус_2_сигма TEXT,
-                    x_сер_плюс_мінус_3_сигма TEXT,
-                    інтервал_міри_колив_сигма TEXT,
-                    інтервал_міри_колив_2_сигма TEXT,
-                    інтервал_міри_колив_3_сигма TEXT,
+                    mean_square_deviation REAL,
+                    aver_freq_fluctuation REAL,
+                    x_aver_plus_minus_sigma TEXT,
+                    x_aver_plus_minus_2_sigma TEXT,
+                    x_aver_plus_minus_3_sigma TEXT,
+                    sigma_fluctuation_interval TEXT,
+                    2sigma_fluctuation_interval TEXT,
+                    3sigma_fluctuation_interval TEXT,
                     V REAL,
                     Vmax REAL,
                     D REAL,
@@ -68,28 +68,28 @@ def create_tables():
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS прикметник_середня_частота
+    cursor.execute('''CREATE TABLE IF NOT EXISTS adjective_aver_freq
                     (id INTEGER PRIMARY KEY NOT NULL,
                     xi INTEGER,
                     ni INTEGER,
                     xini INTEGER,
-                    x_сер INTEGER,
-                    різниця_xi_та_x_сер INTEGER,
-                   квадрат_різниці_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_серni INTEGER)
+                    x_aver INTEGER,
+                    xi_minus_x_aver INTEGER,
+                    xi_minus_x_aver_squared INTEGER,
+                    xi_minus_x_aver_mult_ni_squared INTEGER)
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS прикметник_статистичні_дані
+    cursor.execute('''CREATE TABLE IF NOT EXISTS adjective_statistics
                     (id INTEGER PRIMARY KEY NOT NULL,
-                    серед_квадратич_відхил REAL,
-                    міра_колив_серед_част REAL,
-                    x_сер_плюс_мінус_сигма TEXT,
-                    x_сер_плюс_мінус_2_сигма TEXT,
-                    x_сер_плюс_мінус_3_сигма TEXT,
-                    інтервал_міри_колив_сигма TEXT,
-                    інтервал_міри_колив_2_сигма TEXT,
-                    інтервал_міри_колив_3_сигма TEXT,
+                    mean_square_deviation REAL,
+                    aver_freq_fluctuation REAL,
+                    x_aver_plus_minus_sigma TEXT,
+                    x_aver_plus_minus_2_sigma TEXT,
+                    x_aver_plus_minus_3_sigma TEXT,
+                    sigma_fluctuation_interval TEXT,
+                    2sigma_fluctuation_interval TEXT,
+                    3sigma_fluctuation_interval TEXT,
                     V REAL,
                     Vmax REAL,
                     D REAL,
@@ -97,28 +97,28 @@ def create_tables():
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS сполучник_середня_частота
+    cursor.execute('''CREATE TABLE IF NOT EXISTS conjunction_aver_freq
                     (id INTEGER PRIMARY KEY NOT NULL,
                     xi INTEGER,
                     ni INTEGER,
                     xini INTEGER,
-                    x_сер INTEGER,
-                    різниця_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_серni INTEGER)
+                    x_aver INTEGER,
+                    xi_minus_x_aver INTEGER,
+                    xi_minus_x_aver_squared INTEGER,
+                    xi_minus_x_aver_mult_ni_squared INTEGER)
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS сполучник_статистичні_дані
+    cursor.execute('''CREATE TABLE IF NOT EXISTS conjunction_statistics
                     (id INTEGER PRIMARY KEY NOT NULL,
-                    серед_квадратич_відхил REAL,
-                    міра_колив_серед_част REAL,
-                    x_сер_плюс_мінус_сигма TEXT,
-                    x_сер_плюс_мінус_2_сигма TEXT,
-                    x_сер_плюс_мінус_3_сигма TEXT,
-                    інтервал_міри_колив_сигма TEXT,
-                    інтервал_міри_колив_2_сигма TEXT,
-                    інтервал_міри_колив_3_сигма TEXT,
+                    mean_square_deviation REAL,
+                    aver_freq_fluctuation REAL,
+                    x_aver_plus_minus_sigma TEXT,
+                    x_aver_plus_minus_2_sigma TEXT,
+                    x_aver_plus_minus_3_sigma TEXT,
+                    sigma_fluctuation_interval TEXT,
+                    2sigma_fluctuation_interval TEXT,
+                    3sigma_fluctuation_interval TEXT,
                     V REAL,
                     Vmax REAL,
                     D REAL,
@@ -126,28 +126,28 @@ def create_tables():
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS займенниковий_іменник_середня_частота
+    cursor.execute('''CREATE TABLE IF NOT EXISTS pronoun_aver_freq
                     (id INTEGER PRIMARY KEY NOT NULL,
                     xi INTEGER,
                     ni INTEGER,
                     xini INTEGER,
-                    x_сер INTEGER,
-                    різниця_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_серni INTEGER)
+                    x_aver INTEGER,
+                    xi_minus_x_aver INTEGER,
+                    xi_minus_x_aver_squared INTEGER,
+                    xi_minus_x_aver_mult_ni_squared INTEGER)
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS займенниковий_іменник_статистичні_дані
+    cursor.execute('''CREATE TABLE IF NOT EXISTS pronoun_statistics
                     (id INTEGER PRIMARY KEY NOT NULL,
-                    серед_квадратич_відхил REAL,
-                    міра_колив_серед_част REAL,
-                    x_сер_плюс_мінус_сигма TEXT,
-                    x_сер_плюс_мінус_2_сигма TEXT,
-                    x_сер_плюс_мінус_3_сигма TEXT,
-                    інтервал_міри_колив_сигма TEXT,
-                    інтервал_міри_колив_2_сигма TEXT,
-                    інтервал_міри_колив_3_сигма TEXT,
+                    mean_square_deviation REAL,
+                    aver_freq_fluctuation REAL,
+                    x_aver_plus_minus_sigma TEXT,
+                    x_aver_plus_minus_2_sigma TEXT,
+                    x_aver_plus_minus_3_sigma TEXT,
+                    sigma_fluctuation_interval TEXT,
+                    2sigma_fluctuation_interval TEXT,
+                    3sigma_fluctuation_interval TEXT,
                     V REAL,
                     Vmax REAL,
                     D REAL,
@@ -155,28 +155,28 @@ def create_tables():
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS прийменник_середня_частота
+    cursor.execute('''CREATE TABLE IF NOT EXISTS preposition_aver_freq
                     (id INTEGER PRIMARY KEY NOT NULL,
                     xi INTEGER,
                     ni INTEGER,
                     xini INTEGER,
-                    x_сер INTEGER,
-                    різниця_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_серni INTEGER)
+                    x_aver INTEGER,
+                    xi_minus_x_aver INTEGER,
+                    xi_minus_x_aver_squared INTEGER,
+                    xi_minus_x_aver_mult_ni_squared INTEGER)
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS прийменник_статистичні_дані
+    cursor.execute('''CREATE TABLE IF NOT EXISTS preposition_statistics
                     (id INTEGER PRIMARY KEY NOT NULL,
-                    серед_квадратич_відхил REAL,
-                    міра_колив_серед_част REAL,
-                    x_сер_плюс_мінус_сигма TEXT,
-                    x_сер_плюс_мінус_2_сигма TEXT,
-                    x_сер_плюс_мінус_3_сигма TEXT,
-                    інтервал_міри_колив_сигма TEXT,
-                    інтервал_міри_колив_2_сигма TEXT,
-                    інтервал_міри_колив_3_сигма TEXT,
+                    mean_square_deviation REAL,
+                    aver_freq_fluctuation REAL,
+                    x_aver_plus_minus_sigma TEXT,
+                    x_aver_plus_minus_2_sigma TEXT,
+                    x_aver_plus_minus_3_sigma TEXT,
+                    sigma_fluctuation_interval TEXT,
+                    2sigma_fluctuation_interval TEXT,
+                    3sigma_fluctuation_interval TEXT,
                     V REAL,
                     Vmax REAL,
                     D REAL,
@@ -184,28 +184,28 @@ def create_tables():
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS частка_середня_частота
+    cursor.execute('''CREATE TABLE IF NOT EXISTS particle_aver_freq
                     (id INTEGER PRIMARY KEY NOT NULL,
                     xi INTEGER,
                     ni INTEGER,
                     xini INTEGER,
-                    x_сер INTEGER,
-                    різниця_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_серni INTEGER)
+                    x_aver INTEGER,
+                    xi_minus_x_aver INTEGER,
+                    xi_minus_x_aver_squared INTEGER,
+                    xi_minus_x_aver_mult_ni_squared INTEGER)
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS частка_статистичні_дані
+    cursor.execute('''CREATE TABLE IF NOT EXISTS particle_statistics
                     (id INTEGER PRIMARY KEY NOT NULL,
-                    серед_квадратич_відхил REAL,
-                    міра_колив_серед_част REAL,
-                    x_сер_плюс_мінус_сигма TEXT,
-                    x_сер_плюс_мінус_2_сигма TEXT,
-                    x_сер_плюс_мінус_3_сигма TEXT,
-                    інтервал_міри_колив_сигма TEXT,
-                    інтервал_міри_колив_2_сигма TEXT,
-                    інтервал_міри_колив_3_сигма TEXT,
+                    mean_square_deviation REAL,
+                    aver_freq_fluctuation REAL,
+                    x_aver_plus_minus_sigma TEXT,
+                    x_aver_plus_minus_2_sigma TEXT,
+                    x_aver_plus_minus_3_sigma TEXT,
+                    sigma_fluctuation_interval TEXT,
+                    2sigma_fluctuation_interval TEXT,
+                    3sigma_fluctuation_interval TEXT,
                     V REAL,
                     Vmax REAL,
                     D REAL,
@@ -213,28 +213,28 @@ def create_tables():
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS прислівник_середня_частота
+    cursor.execute('''CREATE TABLE IF NOT EXISTS adverb_aver_freq
                     (id INTEGER PRIMARY KEY NOT NULL,
                     xi INTEGER,
                     ni INTEGER,
                     xini INTEGER,
-                    x_сер INTEGER,
-                    різниця_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_серni INTEGER)
+                    x_aver INTEGER,
+                    xi_minus_x_aver INTEGER,
+                    xi_minus_x_aver_squared INTEGER,
+                    xi_minus_x_aver_mult_ni_squared INTEGER)
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS прислівник_статистичні_дані
+    cursor.execute('''CREATE TABLE IF NOT EXISTS adverb_statistics
                     (id INTEGER PRIMARY KEY NOT NULL,
-                    серед_квадратич_відхил REAL,
-                    міра_колив_серед_част REAL,
-                    x_сер_плюс_мінус_сигма TEXT,
-                    x_сер_плюс_мінус_2_сигма TEXT,
-                    x_сер_плюс_мінус_3_сигма TEXT,
-                    інтервал_міри_колив_сигма TEXT,
-                    інтервал_міри_колив_2_сигма TEXT,
-                    інтервал_міри_колив_3_сигма TEXT,
+                    mean_square_deviation REAL,
+                    aver_freq_fluctuation REAL,
+                    x_aver_plus_minus_sigma TEXT,
+                    x_aver_plus_minus_2_sigma TEXT,
+                    x_aver_plus_minus_3_sigma TEXT,
+                    sigma_fluctuation_interval TEXT,
+                    2sigma_fluctuation_interval TEXT,
+                    3sigma_fluctuation_interval TEXT,
                     V REAL,
                     Vmax REAL,
                     D REAL,
@@ -242,28 +242,28 @@ def create_tables():
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS вигук_середня_частота
+    cursor.execute('''CREATE TABLE IF NOT EXISTS exclemation_aver_freq
                     (id INTEGER PRIMARY KEY NOT NULL,
                     xi INTEGER,
                     ni INTEGER,
                     xini INTEGER,
-                    x_сер INTEGER,
-                    різниця_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_серni INTEGER)
+                    x_aver INTEGER,
+                    xi_minus_x_aver INTEGER,
+                    xi_minus_x_aver_squared INTEGER,
+                    xi_minus_x_aver_mult_ni_squared INTEGER)
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS вигук_статистичні_дані
+    cursor.execute('''CREATE TABLE IF NOT EXISTS exclemation_statistics
                     (id INTEGER PRIMARY KEY NOT NULL,
-                    серед_квадратич_відхил REAL,
-                    міра_колив_серед_част REAL,
-                    x_сер_плюс_мінус_сигма TEXT,
-                    x_сер_плюс_мінус_2_сигма TEXT,
-                    x_сер_плюс_мінус_3_сигма TEXT,
-                    інтервал_міри_колив_сигма TEXT,
-                    інтервал_міри_колив_2_сигма TEXT,
-                    інтервал_міри_колив_3_сигма TEXT,
+                    mean_square_deviation REAL,
+                    aver_freq_fluctuation REAL,
+                    x_aver_plus_minus_sigma TEXT,
+                    x_aver_plus_minus_2_sigma TEXT,
+                    x_aver_plus_minus_3_sigma TEXT,
+                    sigma_fluctuation_interval TEXT,
+                    2sigma_fluctuation_interval TEXT,
+                    3sigma_fluctuation_interval TEXT,
                     V REAL,
                     Vmax REAL,
                     D REAL,
@@ -271,28 +271,28 @@ def create_tables():
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS компаратив_середня_частота
+    cursor.execute('''CREATE TABLE IF NOT EXISTS comparative_aver_freq
                     (id INTEGER PRIMARY KEY NOT NULL,
                     xi INTEGER,
                     ni INTEGER,
                     xini INTEGER,
-                    x_сер INTEGER,
-                    різниця_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_серni INTEGER)
+                    x_aver INTEGER,
+                    xi_minus_x_aver INTEGER,
+                    xi_minus_x_aver_squared INTEGER,
+                    xi_minus_x_aver_mult_ni_squared INTEGER)
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS компаратив_статистичні_дані
+    cursor.execute('''CREATE TABLE IF NOT EXISTS comparative_statistics
                     (id INTEGER PRIMARY KEY NOT NULL,
-                    серед_квадратич_відхил REAL,
-                    міра_колив_серед_част REAL,
-                    x_сер_плюс_мінус_сигма TEXT,
-                    x_сер_плюс_мінус_2_сигма TEXT,
-                    x_сер_плюс_мінус_3_сигма TEXT,
-                    інтервал_міри_колив_сигма TEXT,
-                    інтервал_міри_колив_2_сигма TEXT,
-                    інтервал_міри_колив_3_сигма TEXT,
+                    mean_square_deviation REAL,
+                    aver_freq_fluctuation REAL,
+                    x_aver_plus_minus_sigma TEXT,
+                    x_aver_plus_minus_2_sigma TEXT,
+                    x_aver_plus_minus_3_sigma TEXT,
+                    sigma_fluctuation_interval TEXT,
+                    2sigma_fluctuation_interval TEXT,
+                    3sigma_fluctuation_interval TEXT,
                     V REAL,
                     Vmax REAL,
                     D REAL,
@@ -300,28 +300,28 @@ def create_tables():
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS дієприслівник_середня_частота
+    cursor.execute('''CREATE TABLE IF NOT EXISTS adverbial_participle_aver_freq
                     (id INTEGER PRIMARY KEY NOT NULL,
                     xi INTEGER,
                     ni INTEGER,
                     xini INTEGER,
-                    x_сер INTEGER,
-                    різниця_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_серni INTEGER)
+                    x_aver INTEGER,
+                    xi_minus_x_aver INTEGER,
+                    xi_minus_x_aver_squared INTEGER,
+                    xi_minus_x_aver_mult_ni_squared INTEGER)
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS дієприслівник_статистичні_дані
+    cursor.execute('''CREATE TABLE IF NOT EXISTS adverbial_participle_statistics
                     (id INTEGER PRIMARY KEY NOT NULL,
-                    серед_квадратич_відхил REAL,
-                    міра_колив_серед_част REAL,
-                    x_сер_плюс_мінус_сигма TEXT,
-                    x_сер_плюс_мінус_2_сигма TEXT,
-                    x_сер_плюс_мінус_3_сигма TEXT,
-                    інтервал_міри_колив_сигма TEXT,
-                    інтервал_міри_колив_2_сигма TEXT,
-                    інтервал_міри_колив_3_сигма TEXT,
+                    mean_square_deviation REAL,
+                    aver_freq_fluctuation REAL,
+                    x_aver_plus_minus_sigma TEXT,
+                    x_aver_plus_minus_2_sigma TEXT,
+                    x_aver_plus_minus_3_sigma TEXT,
+                    sigma_fluctuation_interval TEXT,
+                    2sigma_fluctuation_interval TEXT,
+                    3sigma_fluctuation_interval TEXT,
                     V REAL,
                     Vmax REAL,
                     D REAL,
@@ -329,28 +329,28 @@ def create_tables():
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS предикатив_середня_частота
+    cursor.execute('''CREATE TABLE IF NOT EXISTS predicative_aver_freq
                     (id INTEGER PRIMARY KEY NOT NULL,
                     xi INTEGER,
                     ni INTEGER,
                     xini INTEGER,
-                    x_сер INTEGER,
-                    різниця_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_серni INTEGER)
+                    x_aver INTEGER,
+                    xi_minus_x_aver INTEGER,
+                    xi_minus_x_aver_squared INTEGER,
+                    xi_minus_x_aver_mult_ni_squared INTEGER)
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS предикатив_статистичні_дані
+    cursor.execute('''CREATE TABLE IF NOT EXISTS predicative_statistics
                     (id INTEGER PRIMARY KEY NOT NULL,
-                    серед_квадратич_відхил REAL,
-                    міра_колив_серед_част REAL,
-                    x_сер_плюс_мінус_сигма TEXT,
-                    x_сер_плюс_мінус_2_сигма TEXT,
-                    x_сер_плюс_мінус_3_сигма TEXT,
-                    інтервал_міри_колив_сигма TEXT,
-                    інтервал_міри_колив_2_сигма TEXT,
-                    інтервал_міри_колив_3_сигма TEXT,
+                    mean_square_deviation REAL,
+                    aver_freq_fluctuation REAL,
+                    x_aver_plus_minus_sigma TEXT,
+                    x_aver_plus_minus_2_sigma TEXT,
+                    x_aver_plus_minus_3_sigma TEXT,
+                    sigma_fluctuation_interval TEXT,
+                    2sigma_fluctuation_interval TEXT,
+                    3sigma_fluctuation_interval TEXT,
                     V REAL,
                     Vmax REAL,
                     D REAL,
@@ -358,28 +358,28 @@ def create_tables():
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS числівник_середня_частота
+    cursor.execute('''CREATE TABLE IF NOT EXISTS numeral_aver_freq
                     (id INTEGER PRIMARY KEY NOT NULL,
                     xi INTEGER,
                     ni INTEGER,
                     xini INTEGER,
-                    x_сер INTEGER,
-                    різниця_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_сер INTEGER,
-                    квадрат_різниці_xi_та_x_серni INTEGER)
+                    x_aver INTEGER,
+                    xi_minus_x_aver INTEGER,
+                    xi_minus_x_aver_squared INTEGER,
+                    xi_minus_x_aver_mult_ni_squared INTEGER)
     ''')
     conn.commit()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS числівник_статистичні_дані
+    cursor.execute('''CREATE TABLE IF NOT EXISTS numeral_statistics
                     (id INTEGER PRIMARY KEY NOT NULL,
-                    серед_квадратич_відхил REAL,
-                    міра_колив_серед_част REAL,
-                    x_сер_плюс_мінус_сигма TEXT,
-                    x_сер_плюс_мінус_2_сигма TEXT,
-                    x_сер_плюс_мінус_3_сигма TEXT,
-                    інтервал_міри_колив_сигма TEXT,
-                    інтервал_міри_колив_2_сигма TEXT,
-                    інтервал_міри_колив_3_сигма TEXT,
+                    mean_square_deviation REAL,
+                    aver_freq_fluctuation REAL,
+                    x_aver_plus_minus_sigma TEXT,
+                    x_aver_plus_minus_2_sigma TEXT,
+                    x_aver_plus_minus_3_sigma TEXT,
+                    sigma_fluctuation_interval TEXT,
+                    2sigma_fluctuation_interval TEXT,
+                    3sigma_fluctuation_interval TEXT,
                     V REAL,
                     Vmax REAL,
                     D REAL,
